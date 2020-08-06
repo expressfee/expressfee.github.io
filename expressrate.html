@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="https://github.com/fluidicon.png" type="image/png">
+    <title>Express Rate - Expro </title>
+
+    <!-- Bootstrap core CSS-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" >
+
+    <!-- Page level plugin CSS-->
+    <link rel="stylesheet" href="./css/jquery.dataTables.min.css" >
+    
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="./css/dashboard.css" > 
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+                <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Express Pro</a>
+                <ul class="navbar-nav px-3">
+                    <li class="nav-item text-nowrap">
+                        <a class="nav-link" href="./about.html">About</a>
+                      </li>
+                  </ul>
+            </nav>
+            <div class="container-fluid">
+                  <div class="row">
+                      <!-- sidebar -->
+                      <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                          <div class="sidebar-sticky">
+                              <ul class="nav flex-column">
+                                <li class="nav-item">
+                                  <a class="nav-link " href="./index.html">
+                                    <span data-feather="home"></span>
+                                    Express 
+                                  </a>
+                                </li>
+                                <li class="nav-item  ">
+                                  <a class="nav-link " href="./air.html">
+                                    <span data-feather="send"></span>
+                                    Air 
+                                  </a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link " href="./document.html">
+                                    <span data-feather="file"></span>
+                                    Document 
+                                  </a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link  " href="./country.html">
+                                    <span data-feather="map"></span>
+                                    Country 
+                                  </a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link active " href="./expressrate.html">
+                                    <span data-feather="bar-chart-2"></span>
+                                    Express Rate<span class="sr-only">(current)</span>
+                                  </a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" href="./airrate.html">
+                                    <span data-feather="layers"></span>
+                                    Air Rate
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </nav>
+                        <!-- sidebar End -->
+                        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                            <h4>Express Rate</h6>
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                        <li class="nav-item">
+                                          <a class="nav-link active" id="dhl-tab" data-toggle="tab" href="#dhltabtable" role="tab" aria-controls="dhltabtable" aria-selected="true">DHL</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" id="tnt-tab" data-toggle="tab" href="#tnttabtable" role="tab" aria-controls="tnttabtable" aria-selected="false">TNT</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" id="stdhl-tab" data-toggle="tab" href="#stdhltabtable" role="tab" aria-controls="stdhltabtable" aria-selected="false">STDHL</a>
+                                        </li>
+                                      <!--   
+                                        <li class="nav-item">
+                                                <a class="nav-link " id="upssaver-tab" data-toggle="tab" href="#upssavertabtable" role="tab" aria-controls="upssavertabtable" aria-selected="false">Ups Saver</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link" id="upsexpedited-tab" data-toggle="tab" href="#upsexpeditedtabtable" role="tab" aria-controls="upsexpeditedtabtable" aria-selected="false">Ups Expedited</a>
+                                        </li>
+                                        -->
+                                        <li class="nav-item">
+                                                <a class="nav-link" id="fedexiee-tab" data-toggle="tab" href="#fedexieetabtable" role="tab" aria-controls="fedexieetabtable" aria-selected="false">Fedex IEE</a>
+                                        </li>   
+                                         
+                                        <li class="nav-item">
+                                                <a class="nav-link" id="fedexipe-tab" data-toggle="tab" href="#fedexipetabtable" role="tab" aria-controls="fedexipetabtable" aria-selected="false">Fedex IPE</a>
+                                        </li>
+                                        
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                        <div class="tab-pane fade show active" id="dhltabtable" role="tabpanel" aria-labelledby="dhl-tab">.dhl-tab..</div>
+                                        <div class="tab-pane fade" id="tnttabtable" role="tabpanel" aria-labelledby="tnt-tab">..tnttabtable.</div>
+                                        <div class="tab-pane fade" id="stdhltabtable" role="tabpanel" aria-labelledby="stdhl-tab">..stdhltabtable.</div>
+                                       <!--  <div class="tab-pane fade" id="upssavertabtable" role="tabpanel" aria-labelledby="upssaver-tab">..upssavertabtable.</div>
+                                        <div class="tab-pane fade" id="upsexpeditedtabtable" role="tabpanel" aria-labelledby="upsexpedited-tab">..upsexpeditedtabtable.</div>-->
+                                        <div class="tab-pane fade" id="fedexieetabtable" role="tabpanel" aria-labelledby="fedexiee-tab">.fedexieetabtable..</div>
+                                       <div class="tab-pane fade" id="fedexipetabtable" role="tabpanel" aria-labelledby="fedexipe-tab">.fedexipetabtable..</div> 
+                                </div>     
+                              <!-- Table End -->
+                        
+                              <!-- Sticky Footer -->
+                              <footer class="sticky-footer">
+                                <div class="container my-auto">
+                                  <div class="copyright text-center my-auto">
+                                      <span>Copyright © Expro - SIUI  2019</span>
+                                  </div>
+                                </div>
+                              </footer>
+                            
+                            </main>
+                            <!-- main End -->
+                      </div>
+                      <!-- Row End -->
+                  </div>
+                  <!-- container End -->
+          
+          
+      
+          <script src="./js/feather.js"></script>
+          <script>    
+          feather.replace()
+          </script>
+
+   
+    <!-- Bootstrap core JavaScript-->    
+    <script src="./js/jquery-3.3.1.js"></script>  
+    <script src="./js/popper.min.js" ></script>
+        
+    <script src="./js/bootstrap.min.js" ></script>
+       
+    <!-- Page level plugin JavaScript-->        
+    <script src="./js/jquery.dataTables.min.js"></script>
+      
+    <!-- 读取JSON文件 scripts for this page--> 
+    <script src="./json/json_Rate_DHL.js"></script>
+    <script src="./json/json_Rate_FedexIEE.js"></script>
+    <script src="./json/json_Rate_FedexIPE.js"></script>
+    <script src="./json/json_Rate_STDHL.js"></script>
+    <script src="./json/json_Rate_TNT.js"></script>
+    <script src="./json/json_fuelSurcharge.js"></script>
+    <script src="./json/json_currencyrate.js"></script>
+    <!-- Demo scripts for this page-->
+    <script src="./script/site.js"></script>
+
+    <script src="./script/expressrate_gettable.js"></script>
+
+  </body>
+</html>

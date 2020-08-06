@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">    
+    <link rel="icon" href="https://github.com/fluidicon.png" type="image/png">
+    <title>Air Rate - Expro</title>        
+
+     <!-- Bootstrap core CSS-->
+     <link rel="stylesheet" href="./css/bootstrap.min.css" >
+
+     <!-- Page level plugin CSS-->    
+     <link rel="stylesheet" href="./css/jquery.dataTables.min.css" >
+   
+     <!-- Custom styles for this template --> 
+     <link rel="stylesheet" href="./css/dashboard.css" >   
+  </head>
+  <body>
+      <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+                <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Express Pro</a>
+                <ul class="navbar-nav px-3">
+                    <li class="nav-item text-nowrap">
+                        <a class="nav-link" href="./about.html">About</a>
+                      </li>
+                  </ul>
+      </nav>
+      <div class="container-fluid">
+          <div class="row">
+                      <!-- sidebar -->
+                      <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                          <div class="sidebar-sticky">
+                              <ul class="nav flex-column">
+                                <li class="nav-item">
+                                  <a class="nav-link " href="./index.html">
+                                    <span data-feather="home"></span>
+                                    Express 
+                                  </a>
+                                </li>
+                                <li class="nav-item  ">
+                                  <a class="nav-link " href="./air.html">
+                                    <span data-feather="send"></span>
+                                    Air 
+                                  </a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link " href="./document.html">
+                                    <span data-feather="file"></span>
+                                    Document 
+                                  </a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link  " href="./country.html">
+                                    <span data-feather="map"></span>
+                                    Country 
+                                  </a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link " href="./expressrate.html">
+                                    <span data-feather="bar-chart-2"></span>
+                                    Express Rate
+                                  </a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link active" href="./airrate.html">
+                                    <span data-feather="layers"></span>
+                                    Air Rate<span class="sr-only">(current)</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </nav>
+                        <!-- sidebar End -->
+                        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                                <h4>Air Rate</h6>
+                                <div class="input-group mb-3" name="divsearchairrate" >
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon3">Search</span>
+                                  </div>
+                                  <input type="text" class="form-control" id="inputSearchairrate" placeholder="Search"  >
+                                </div>
+                              
+                              <div class="table-responsive">
+                                <table class="table table-striped table-hover table-sm "  id="airratetable" >
+                                  
+                                </table>
+                            </div>
+                            <!-- Table End -->
+                        
+                              <!-- Sticky Footer -->
+                              <footer class="sticky-footer">
+                                <div class="container my-auto">
+                                  <div class="copyright text-center my-auto">
+                                      <span>Copyright © Expro - SIUI  2019</span>
+                                  </div>
+                                </div>
+                              </footer>
+                            
+                            </main>
+                            <!-- main End -->
+                      </div>
+                      <!-- Row End -->
+                  </div>
+                  <!-- container End -->
+          
+          
+      
+          <script src="./js/feather.js"></script>
+          <script>    
+          feather.replace()
+          </script>
+          
+    <!-- Bootstrap core JavaScript-->    
+    <script src="./js/jquery-3.3.1.js"></script>  
+    <script src="./js/popper.min.js" ></script>
+        
+    <script src="./js/bootstrap.min.js" ></script>
+       
+    <!-- Page level plugin JavaScript-->        
+    <script src="./js/jquery.dataTables.min.js"></script>
+      
+    <!-- 读取JSON文件 scripts for this page--> 
+    <script src="./json/json_freightAir.js"></script>
+ 
+    <script src="./json/json_currencyrate.js"></script>
+
+    <!-- Demo scripts for this page-->
+    <script src="./script/site.js"></script>
+
+    <script src="./script/airrate_gettable.js"></script>
+
+  </body>
+</html>
