@@ -177,14 +177,14 @@
 </script>
 <!-- Bootstrap core JavaScript-->
 <script src="./js/jquery-3.3.1.js"></script>
-<script src="./script/jquery-ui.js"></script>
+<script src="./js/jquery-ui.js"></script>
 <script src="./js/popper.min.js" ></script>
 <script src="./js/bootstrap.min.js"></script>
      
 <!-- Page level plugin JavaScript-->        
 <script src="./js/jquery.dataTables.min.js"></script>
       
-<!-- 读取JSON文件 scripts for this page--> 
+<!-- 读取JSON文件，相当于数据库 scripts for this page--> 
 
 <script src="./json/json_product.js"></script> 
 <script src="./json/json_countrysortbyname.js"></script>   
@@ -201,14 +201,16 @@
            
   
 <!-- Demo scripts for this page-->
-<script src="./script/site.js"></script>
+<script src="./js/site.js"></script>
 
-<script src="./script/express_gettable.js"></script>
+<!-- 获取产品列表 -->
+<script src="./script/index_gettable.js"></script>
 
+<!-- 填充已经选取产品的列表，计算统计行. -->
+<script src="./script/index_handledata.js"></script>
 
-<script src="./script/express_handledata.js"></script>
-
-<script src="./script/getzonerate.js"></script>
+<!-- 计算运费. -->
+<script src="./script/index_getzonerate.js"></script>
 
 <script>
     $(document).ready(function(){
