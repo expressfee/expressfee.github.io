@@ -331,14 +331,9 @@ function getdhllocalrate(countryid,zonedhl, chargeweight){
 function getdhless(countryid , chargeweight){
     
     var emergencysurcharge = new Number(0);
-    if(countryid == 601 ){
-        //澳大利亚
-        emergencysurcharge = chargeweight * 16 ;
-    }
-    else if(countryid == 609 )
-    {
-        //新西兰
-        emergencysurcharge =  chargeweight * 16 ;
+    if(countryid > 601 ){
+        //大洋洲
+        emergencysurcharge = chargeweight * 18 ;
     }
     else
     {
@@ -802,7 +797,7 @@ function getstdhllocalrate(countryid, zonestdhl,chargeweight){
     }
     //疫情附加费.
     var emergencysurcharge = new Number(0);
-    emergencysurcharge=getstemergencysurcharge(countryid, chargeweight);    
+    emergencysurcharge=getstdhlemergencysurcharge(countryid, chargeweight);    
     currencyrate = currencyrate + emergencysurcharge ;
     if(currencyrate>0){
     currencyrate = (currencyrate * ( 1 + fulsurcharge) ).toFixed(2) ;
@@ -816,16 +811,16 @@ if(zonestdhl == "0" ){
 }
 
 
-function getstemergencysurcharge(countryid, chargeweight){
+function getstdhlemergencysurcharge(countryid, chargeweight){
     var emergencysurcharge = new Number(0);
-    if(countryid < 200 )
+    if(countryid > 600 )
     {
-        //亚洲国家、地区
-        emergencysurcharge = chargeweight * 7 ;
+        //大洋洲
+        emergencysurcharge = chargeweight * 16 ;
     } 
     else
     {
-        emergencysurcharge = chargeweight * 14 ;
+        emergencysurcharge = chargeweight * 7 ;
     }
     return emergencysurcharge ;
 }
